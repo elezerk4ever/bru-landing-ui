@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRU</title>
+    <link rel="stylesheet" href="/css/utilities/default.css">
+    <link rel="stylesheet" href="./css/variables/colors.css">
+    <link rel="stylesheet" href="/css/pages/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <img src="/images/headerlogo.png" alt="" id="forbigscreen">
+    <div class="container">
+        <header>
+            <div id="headerbg"></div>
+            <div id="headerlogo"></div>
+            <div id="headertext"></div>
+            <button class="nav-btn">
+            </button>
+        </header>
+        <ul id="notforsmall">
+            <li>
+                <a href="#">ENROLL NOW</a>
+                <img src="/images/arrow1.1.png" alt="" class="icon-notforsmall">
+
+            </li>
+            <li>
+                <a href="#">ABOUT US</a>
+                <img src="/images/arrow2.png" alt="" class="icon-notforsmall">
+
+            </li>
+            <li>
+                <a href="#">CONTACT US</a>
+                <img src="/images/arrow3.png" alt="" class="icon-notforsmall">
+
+            </li>
+            <li>
+                <a href="#">SIGN UP</a>
+                <img src="/images/arrow1.png" alt="" class="icon-notforsmall">
+            </li>
+        </ul>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">ENROLL NOW</a>
+                </li>
+                <li>
+                    <a href="#">ABOUT US</a>
+                </li>
+                <li>
+                    <a href="#">CONTACT US</a>
+                </li>
+                <li>
+                    <a href="#">SIGN UP</a>
+                    <img src="/images/arrow1.png" alt="">
+                </li>
+            </ul>
+            <div id="navbg"></div>
+        </nav>
+        
+        <main>
+            <img src="/images/map.png" alt="" id="map">
+        </main>
+        <footer>
+            <img src="/images/footerlogo.png" alt="">
+        </footer>
+        <div id="footer2">
+            COPY RIGHT DETAILS
+            <br>
+            COMPANY DETAILS
+        </div>
+    </div>
+    <script>
+        $('nav').hide();
+        $(function(){
+            $('.nav-btn').click(function(){
+                $('nav').slideToggle(150);
+            });
+        })
+    </script>
+</body>
+</html>

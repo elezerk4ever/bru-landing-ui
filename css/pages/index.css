@@ -1,0 +1,205 @@
+ul>li>a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:var(--primary);
+}
+body{
+    background: var(--secondary);
+}
+header {
+    height: 30vh;
+    display: grid;
+    grid-template-columns: 1em 2fr 5fr 1em 1em 1em;
+    grid-template-rows:repeat(3,1fr);
+}
+
+#headerbg {
+    position: absolute;
+    height: 20vh;
+    width: 100vw;
+    background: url('../../images/headerbg.png');
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+#headerlogo {
+    background: url('../../images/headerlogo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column: 2/3;
+    grid-row: 1/5;
+}
+#headertext{
+    background: url('../../images/headertext.png');
+    background-position: center;
+    background-size: contain;
+    grid-row: 1/3;
+    grid-column: 3/6;
+    background-repeat: no-repeat;
+}
+#notforsmall{
+    display: none;
+}
+nav{
+    width: 40vw;
+    height: 50vh;
+    position: absolute;
+    top: 20vh;
+    left: 60vw;
+    padding-top: 80px;
+    text-align: center;
+}
+nav ul li{
+    margin:2em 0px;
+    transition: 150ms;
+}
+nav ul li img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+nav ul li:hover{
+    background: var(--dark);
+    padding:1em 0px;
+}
+nav a:hover {
+    color: var(--warning);
+}
+nav ul>li:nth-child(4){
+    margin-top: 3em;
+    font-size: 140%;
+}
+.nav-btn{
+    background:transparent;
+    grid-row: 3/4;
+    width:45px;
+    height: 45px;
+    border:none;
+    grid-column: 4/5;
+    background: url('../../images/arrow.png');
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    background-position: center;
+    z-index: 9999;
+}
+#navbg{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: var(--dark);
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+main {
+    margin-top: 10px;
+    position: relative;
+    z-index: -4;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1em 1fr 1em 1em;
+}
+main > #map {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border: 0.5em solid #999;
+    grid-column: 2/3;
+}
+footer {
+    height: 10vh;
+    width: 100vw;
+}
+footer>img{
+    width: 40vw;
+    display: block;
+    margin: auto;
+}
+#footer2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    padding-left: 1em;
+    font-size: 80%;
+}
+.icon-notforsmall{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+#forbigscreen{
+    display: none;
+}
+@media screen AND (min-width:768px){
+    /* body{
+        background: red;
+    } */
+    #notforsmall{
+       display: flex;
+       position: absolute;
+       top: 22vh;
+       right: 1em;
+       z-index: 999;
+    }
+    #notforsmall li{
+        display: block;
+        margin: 0px 2.5em 0px 0px;
+        text-align: center;
+    }
+    .nav-btn{
+        display: none;
+    }
+    header {
+        height: 30vh;
+        display: grid;
+        grid-template-columns: 1fr 4fr 6fr 1fr;
+        grid-template-rows:repeat(4,1fr);
+    }
+    #headertext{
+        background-position: left;
+        grid-column: 3/4;
+        grid-row: 1/5;
+    }
+    #headerlogo {
+        background: url('../../images/headerlogo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-column: 2/3;
+        grid-row: 1/6;
+    }
+    main {
+        margin-top: 5vh;
+        position: relative;
+        z-index: -4;
+        height: 52vh;
+        display: grid;
+        grid-template-columns: 2fr 9fr 1fr 1fr;
+    }
+    footer>img{
+        width: 200px;
+    }
+    #notforsmall>li:nth-child(4){
+        font-size: 30px;
+    }
+}
+@media screen AND (min-width:1024px){
+    #notforsmall li{
+        margin: 0px 5em 0px 0px;
+        text-align: center;
+    }
+    #notforsmall>li:nth-child(4){
+        margin-right: 2em;
+    }
+    #headerlogo{
+        background: transparent;
+    }
+    
+    #forbigscreen{
+        display: block;
+        position: absolute;
+        width: 10vw;
+        left: 10vh;
+    }
+    #footer2{
+        position: fixed;
+        bottom: 2px;
+    }
+}
