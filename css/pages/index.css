@@ -67,6 +67,9 @@ nav a:hover {
 nav ul>li:nth-child(4){
     font-size: 140%;
 }
+nav a, #notforsmall a{
+    font-family: "impact";
+}
 .nav-btn{
     background:transparent;
     grid-row: 3/4;
@@ -131,14 +134,14 @@ footer>img{
     display: none;
 }
 
-@media screen AND (min-width:768px){
+@media screen AND (min-width:800px){
     /* body{
         background: red;
     } */
     #notforsmall{
        display: flex;
        position: absolute;
-       top: 22vh;
+       top: 25vh;
        right: 1em;
        z-index: 999;
     }
