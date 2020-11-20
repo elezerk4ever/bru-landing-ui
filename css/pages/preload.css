@@ -1,0 +1,28 @@
+#preload {
+	background:var(--warning);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99999;
+}
+#preload>#loader{
+	width: 100vw;
+	height: 100vh;
+	background-image: url('/images/footerlogo.svg');
+	background-position: center;
+	/*background:red;*/
+	background-size: 200px;
+	background-repeat: no-repeat;
+	z-index: 999999;
+	animation-name: rotateMe;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rotateMe{
+	to{
+		transform: rotateY(360deg);
+	}
+}

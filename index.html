@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="/css/utilities/default.css">
     <link rel="stylesheet" href="./css/variables/colors.css">
     <link rel="stylesheet" href="/css/pages/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/pages/preload.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div id="preload">
+        <div id="loader">
+            
+        </div>
+    </div>
     <img src="/images/headerlogo.png" alt="" id="forbigscreen">
     <div class="container">
         <header>
@@ -77,6 +83,9 @@
             $('.nav-btn').click(function(){
                 $('nav').slideToggle(150);
             });
+        })
+        window.addEventListener('load', function(){
+            $('#preload').fadeOut(1000);
         })
     </script>
 </body>
